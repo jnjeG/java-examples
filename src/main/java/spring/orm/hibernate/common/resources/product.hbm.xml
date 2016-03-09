@@ -4,8 +4,9 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="spring.orm.hibernate.common.bean.Product" table="product">
+    <class name="spring.orm.hibernate.common.bean.Product" table="product" schema="springdemo">
         <id name="id">
+            <column name="id"/>
             <generator class="identity"/>
         </id>
         <property name="productName" column="product_name" />

@@ -17,7 +17,7 @@ public class ProductDaoImpl implements ProductDao {
 
     public Collection loadProductsByCategory(String category) {
         return this.sessionFactory.getCurrentSession()
-                .createQuery("from test.product product where product.category=?")
+                .createQuery("from spring.orm.hibernate.common.bean.Product product where product.category=?")
                 .setParameter(0, category)
                 .list();
     }
