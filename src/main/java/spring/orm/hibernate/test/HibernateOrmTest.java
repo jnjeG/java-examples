@@ -1,14 +1,18 @@
 package spring.orm.hibernate.test;
 
+import org.javaexamples.SearchTag;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.orm.hibernate.common.service.ProductService;
 
 import java.util.Collection;
 
-/**
- * Created by chenjunjie on 16/3/5.
- */
+@SearchTag(
+        {"spring-Hibernate"
+         ,"spring-ORM"
+        ,"事务"
+        }
+)
 public class HibernateOrmTest {
     public static void main(String[] args) {
         hibernateOrmTest();
