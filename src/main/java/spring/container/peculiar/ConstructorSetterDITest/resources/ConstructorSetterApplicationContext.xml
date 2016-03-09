@@ -13,7 +13,9 @@
 
     <bean id="car" class="spring.container.peculiar.ConstructorSetterDITest.bean.Car">
         <property name="wheel" ref="wheel"></property>
-        <constructor-arg ref="engine"></constructor-arg>
+        <constructor-arg ref="wheel"></constructor-arg>
+        <!--uncomment next line-->
+        <!--<constructor-arg ref="engine"></constructor-arg>-->
     </bean>
 
 </beans>

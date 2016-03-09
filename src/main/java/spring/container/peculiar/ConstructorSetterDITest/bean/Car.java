@@ -12,6 +12,10 @@ public class Car {
         System.out.println("construct engine");
     }
 
+    public Car(Wheel wheel) {
+        this.wheel = wheel;
+    }
+
     public void setWheel(Wheel wheel) {
         this.wheel = wheel;
         System.out.println("set wheel");
