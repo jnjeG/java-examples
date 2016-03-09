@@ -4,7 +4,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="spring.orm.hibernate.common.bean.Product" table="product" schema="springdemo">
+    <class name="spring.orm.hibernate.common.bean.Product" table="product">
         <id name="id">
             <column name="id"/>
             <generator class="identity"/>
