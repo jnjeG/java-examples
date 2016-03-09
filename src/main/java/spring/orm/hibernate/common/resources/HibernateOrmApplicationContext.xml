@@ -9,6 +9,9 @@
        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
         >
 
+    <context:component-scan base-package="spring.jdbc"/>
+    <context:property-placeholder location="spring/orm/hibernate/common/resources/jdbc.properties"/>
+
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
         <property name="url" value="${jdbc.url}"/>
@@ -30,25 +33,11 @@
         </property>
     </bean>
 
-    <bean id="productDao" class="spring.orm.hibernate.common.dao.impl.ProductDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-
-    <bean id="productService" class="spring.orm.hibernate.common.service.impl.ProductServiceImpl">
-        <property name="productDao" ref="productDao"/>
-    </bean>
-
-
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <aop:config>
-        <aop:pointcut id="productServiceMethods"
-                      expression="execution(* spring.orm.hibernate.common.service..*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="productServiceMethods"/>
-    </aop:config>
 
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
@@ -58,6 +47,20 @@
         </tx:attributes>
     </tx:advice>
 
-    <context:property-placeholder location="spring/orm/hibernate/common/resources/jdbc.properties"/>
-    <context:component-scan base-package="spring.jdbc"/>
+
+    <aop:config>
+        <aop:pointcut id="productServiceMethods"
+                      expression="execution(* spring.orm.hibernate.common.service..*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="productServiceMethods"/>
+    </aop:config>
+
+
+    <bean id="productDao" class="spring.orm.hibernate.common.dao.impl.ProductDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="productService" class="spring.orm.hibernate.common.service.impl.ProductServiceImpl">
+        <property name="productDao" ref="productDao"/>
+    </bean>
+
 </beans>
