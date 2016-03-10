@@ -8,10 +8,11 @@ import spring.orm.hibernate.common.service.ProductService;
 import java.util.Collection;
 
 @SearchTag(
-        {"spring-Hibernate"
-         ,"spring-ORM"
-        ,"事务"
-        }
+{
+"spring-Hibernate",
+"spring-ORM",
+"事务"
+}
 )
 public class HibernateOrmTest {
     public static void main(String[] args) {
