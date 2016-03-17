@@ -1,6 +1,7 @@
 package spring.orm.jdo.test;
 
-import org.javaexamples.SearchTag;
+import org.expl.NotFinishedTest;
+import org.expl.SearchTag;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.orm.jdo.common.service.ProductService;
@@ -14,6 +15,7 @@ import java.util.Collection;
 "事务"
 }
 )
+@NotFinishedTest(reason = "配置项未完善，导致启动失败")
 public class JdoTest {
     public static void main(String[] args) {
         hibernateOrmTest();

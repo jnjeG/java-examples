@@ -1,6 +1,6 @@
 package spring.orm.hibernate.test;
 
-import org.javaexamples.SearchTag;
+import org.expl.SearchTag;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.orm.hibernate.common.service.ProductService;

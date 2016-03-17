@@ -19,6 +19,7 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
+
     <bean id="myPmf" class="org.datanucleus.jdo.JDOPersistenceManagerFactory" destroy-method="close">
         <property name="connectionFactory" ref="dataSource"/>
         <property name="nontransactionalRead" value="true"/>

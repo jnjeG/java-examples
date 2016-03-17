@@ -1,10 +1,9 @@
 package spring.container.test;
 
-import org.javaexamples.SearchTag;
+import org.expl.SearchTag;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.container.peculiar.ConstructorSetterDITest.bean.Car;
-import spring.jdbc.common.dao.UrUserDao;
 
 @SearchTag({
         "当设值注入与构造注入同时存在时",
