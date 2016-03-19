@@ -1,6 +1,6 @@
 package spring.container.test;
 
-import org.expl.SearchTag;
+import org.expl.annotation.SearchTag;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.container.peculiar.ConstructorSetterDITest.bean.Car;
