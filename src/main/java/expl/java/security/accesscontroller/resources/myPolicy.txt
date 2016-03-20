@@ -1,0 +1,5 @@
+grant codebase "file:/Users/chenjunjie/code/git/java-examples/target/classes/expl/java/security/accesscontroller/util"
+ {
+  permission java.io.FilePermission
+    "/Users/chenjunjie/code/git/java-examples/target/classes/expl/java/security/accesscontroller/resources/*", "write";
+ };
