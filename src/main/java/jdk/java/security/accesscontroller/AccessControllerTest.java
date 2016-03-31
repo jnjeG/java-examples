@@ -1,6 +1,6 @@
-package expl.java.security.accesscontroller;
+package jdk.java.security.accesscontroller;
 
-import expl.java.security.accesscontroller.util.FileUtil;
+import jdk.java.security.accesscontroller.util.FileUtil;
 import org.expl.annotation.NotFinishedTest;
 
 import java.io.File;
