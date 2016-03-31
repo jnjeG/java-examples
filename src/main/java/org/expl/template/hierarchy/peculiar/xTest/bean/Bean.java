@@ -1,4 +1,4 @@
-package template.hierarchy.common.bean;
+package org.expl.template.hierarchy.peculiar.xTest.bean;
 
 /**
  * Created by chenjunjie on 16/2/24.

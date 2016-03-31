@@ -1,4 +1,4 @@
-package template.hierarchy.peculiar.xTest.service;
+package org.expl.template.hierarchy.common.service;
 
 /**
  * Created by chenjunjie on 16/2/24.

@@ -1,4 +1,4 @@
-package template.hierarchy.common.service.impl;
+package org.expl.template.hierarchy.common.service.impl;
 
 import spring.jdbc.common.service.UrUserService;
 

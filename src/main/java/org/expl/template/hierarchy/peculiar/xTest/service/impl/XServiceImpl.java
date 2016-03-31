@@ -1,4 +1,4 @@
-package template.hierarchy.peculiar.xTest.service.impl;
+package org.expl.template.hierarchy.peculiar.xTest.service.impl;
 
 import spring.jdbc.common.service.UrUserService;
 

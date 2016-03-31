@@ -1,4 +1,4 @@
-package template.hierarchy.test;
+package org.expl.template.hierarchy.test;
 
 /**
  * Created by chenjunjie on 16/3/5.

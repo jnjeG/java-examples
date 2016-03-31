@@ -1,4 +1,4 @@
-package template.hierarchy.common.dao.impl;
+package org.expl.template.hierarchy.peculiar.xTest.dao.impl;
 
 import spring.jdbc.common.bean.UrUser;
 import spring.jdbc.common.dao.UrUserDao;
