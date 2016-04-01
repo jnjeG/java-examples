@@ -1,4 +1,4 @@
-package book.jvm;
+package book.jvm.ch2;
 
 /**
  * VM Args：-Xss128k

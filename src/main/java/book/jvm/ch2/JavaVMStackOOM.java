@@ -1,4 +1,4 @@
-package book.jvm;
+package book.jvm.ch2;
 
 /**
  * VM Args：-Xss2M （这时候不妨设大些）
