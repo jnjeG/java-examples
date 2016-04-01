@@ -7,7 +7,7 @@ import java.util.List;
  * VM Args：-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  * @author zzm
  */
-public class HeapOOM {
+public class _2_3_HeapOOM {
 
     static class OOMObject {
     }

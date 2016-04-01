@@ -4,7 +4,7 @@ package book.jvm.ch2;
  * VM Args：-Xss128k
  * @author zzm
  */
-public class JavaVMStackSOF {
+public class _2_4_JavaVMStackSOF {
 
     private int stackLength = 1;
 
@@ -14,7 +14,7 @@ public class JavaVMStackSOF {
     }
 
     public static void main(String[] args) throws Throwable {
-        JavaVMStackSOF oom = new JavaVMStackSOF();
+        _2_4_JavaVMStackSOF oom = new _2_4_JavaVMStackSOF();
         try {
             oom.stackLeak();
         } catch (Throwable e) {
