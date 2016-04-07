@@ -5,8 +5,8 @@ package jdk.java.lang;
  */
 public class booleanTest {
     public static void main(String[] args) {
-        boolean f = false;
-        boolean t = true;
+        boolean f = true;
+        boolean t = false;
         boolean xor = f ^ t;
         System.out.print(xor);
     }
