@@ -9,6 +9,7 @@ import java.util.Date;
 
 /**
  * Created by chenjunjie on 16/5/2.
+ * 原博客地址：http://www.cnblogs.com/e241138/archive/2012/05/15/2501458.html
  */
 public class SimpleDateFormatTest {
     public static void main(String[] args) throws IOException, ParseException {
