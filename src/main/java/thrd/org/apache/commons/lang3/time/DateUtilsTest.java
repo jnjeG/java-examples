@@ -7,6 +7,9 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * 原博客地址：http://yl23250.iteye.com/blog/2181258
+ */
 public class DateUtilsTest {
 
 
