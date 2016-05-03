@@ -16,6 +16,8 @@ public class DateUtilsTest {
     public static void main(String[] args) throws ParseException {
         Date date1 = new Date();
         Date date2 = new Date();
+        sayDate(date1);
+        sayDate(date2);
         /**
          * return  boolean
          * 日期是否相等
@@ -91,16 +93,35 @@ public class DateUtilsTest {
         sayDate(DateUtils.truncate(date1, Calendar.MONTH));
         sayDate(DateUtils.truncate(date1, Calendar.DAY_OF_MONTH));
         sayDate(DateUtils.truncate(date1, Calendar.HOUR_OF_DAY));
-        //sayDate(DateUtils.truncate(date1, Calendar.HOUR));常量都是5与上面一样
+        sayDate(DateUtils.truncate(date1, Calendar.HOUR));
         sayDate(DateUtils.truncate(date1, Calendar.MINUTE));
         sayDate(DateUtils.truncate(date1, Calendar.SECOND));
-        /**
-         * 取极限值
-         * Calendar.DAY_OF_MONTH  天的最大值2015-01-30 00:00:00
-         * 月的终点Calendar.MONTH
-         */
-        System.out.println("----ceiling");
+                /**
+                 * 取极限值
+                 * Calendar.DAY_OF_MONTH  天的最大值2015-01-30 00:00:00
+                 * 月的终点Calendar.MONTH
+                 */
+                System.out.println("----ceiling");
         sayDate(DateUtils.ceiling(date1, Calendar.MONTH));
+
+        System.out.println("----getFragmentInXXX");
+        say(DateUtils.getFragmentInSeconds(date1, Calendar.MINUTE));
+        say(DateUtils.getFragmentInMinutes(date1, Calendar.HOUR_OF_DAY));//不是Calendar.HOUR
+        say(DateUtils.getFragmentInHours(date1, Calendar.DAY_OF_MONTH));
+        say(DateUtils.getFragmentInDays(date1, Calendar.MONTH));
+        System.out.println("----Calendar");
+        Calendar calendar = DateUtils.toCalendar(date1);
+        say(calendar.get(Calendar.YEAR));
+        say(calendar.get(Calendar.MONTH));//月份从0开始算起
+        say(calendar.get(Calendar.DAY_OF_MONTH));//一个月的第几天
+        say(calendar.get(Calendar.DAY_OF_YEAR));//一年中的第几天
+        say(calendar.get(Calendar.DAY_OF_WEEK));//从周日开始算起
+        say(calendar.get(Calendar.HOUR));//0点开始算;到12点重新归0
+        say(calendar.get(Calendar.HOUR_OF_DAY));//可以到达13点
+        say(calendar.get(Calendar.MINUTE));
+        say(calendar.get(Calendar.SECOND));
+        say(calendar.get(Calendar.WEEK_OF_MONTH));
+
     }
 
     public static void say(Object o ){
