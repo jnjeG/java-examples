@@ -14,7 +14,7 @@ import java.util.Date;
 public class SimpleDateFormatTest {
     public static void main(String[] args) throws IOException, ParseException {
         // TODO Auto-generated method stub
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("请键入日期（如：2008-8-8）：");
         String str = br.readLine();
@@ -33,6 +33,9 @@ public class SimpleDateFormatTest {
 
         dateFormatter.applyPattern("E");
         System.out.println("一个星期中的天数：" + dateFormatter.format(date));
+
+        dateFormatter.applyPattern("m");
+        System.out.println("一个小时中的的分钟数：" + dateFormatter.format(date));
 
         br.close();
 
