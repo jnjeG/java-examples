@@ -13,7 +13,6 @@ import java.util.Date;
  */
 public class SimpleDateFormatTest {
     public static void main(String[] args) throws IOException, ParseException {
-        // TODO Auto-generated method stub
         SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("请键入日期（如：2008-8-8）：");
